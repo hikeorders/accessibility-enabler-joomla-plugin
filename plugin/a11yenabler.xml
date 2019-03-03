@@ -25,7 +25,7 @@
                        label="PLG_SYSTEM_A11Y_ENABLER_ORG_ID_LABEL"
                 />
                 <field name="spacer_info"
-                       type="info"
+                       type="spacerinfo"
                        default=""
                        label=""
                        description=""
