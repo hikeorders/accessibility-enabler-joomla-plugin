@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="system">
+    <name>Accessibility Enabler</name>
+    <author>HikeOrders</author>
+    <creationDate>March 2019</creationDate>
+    <copyright>Copyright (C) 2019 HikeOrders.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html; see LICENSE.txt</license>
+    <authorEmail>team@hikeorders.com</authorEmail>
+    <authorUrl>https://hikeorders.com/accessibility/home</authorUrl>
+    <version>3.8.5</version>
+    <description>PLG_SYSTEM_A11Y_ENABLER_DESCRIPTION</description>
+    <files>
+        <filename plugin="a11yenabler">a11yenabler.php</filename>
+        <filename>index.html</filename>
+        <folder>a11y-enabler</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params" addfieldpath="plugins/system/a11yenabler/a11y-enabler/admin">
+            <fieldset name="basic">
+                <field name="org_id"
+                       type="text"
+                       default=""
+                       description="PLG_SYSTEM_A11Y_ENABLER_ORG_ID_DESC"
+                       label="PLG_SYSTEM_A11Y_ENABLER_ORG_ID_LABEL"
+                />
+                <field name="spacer_info"
+                       type="info"
+                       default=""
+                       label=""
+                       description=""
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
