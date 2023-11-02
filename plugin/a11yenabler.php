@@ -32,7 +32,9 @@ class plgSystemA11yEnabler extends JPlugin
         if (substr(JURI::base(), -15) != "/administrator/")
         {
             $org_id = $this->params->get('org_id');
-            $org_id = trim($org_id);
+	    if($org_id != null) {
+               $org_id = trim($org_id);
+	    }
 
 
             if(empty($org_id) == false ) {
