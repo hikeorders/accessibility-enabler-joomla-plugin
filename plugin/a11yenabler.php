@@ -26,7 +26,7 @@ class plgSystemA11yEnabler extends JPlugin
 
     function onBeforeCompileHead()
     {
-        $document = JFactory::getDocument();
+        
 
         // apply styles only to front-end
         if (substr(JURI::base(), -15) != "/administrator/")
@@ -39,7 +39,13 @@ class plgSystemA11yEnabler extends JPlugin
 
             if(empty($org_id) == false ) {
                 $url = "https://jsappcdn.hikeorders.com/main/assets/js/hko-accessibility.min.js?orgId=".$org_id;
-                $document->addScript($url, "text/javascript", false, true);
+                
+	        //  $document = JFactory::getDocument();
+               // $document->addScript($url, "text/javascript", false, true);
+
+                /** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
+                $wa = JFactory::getApplication()->getDocument()->getWebAssetManager();
+                $wa->registerAndUseScript("a11yEnablerScript", $url, [],[], ['core']);
             }
 
         }
